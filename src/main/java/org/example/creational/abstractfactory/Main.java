@@ -3,8 +3,10 @@ package org.example.creational.abstractfactory;
 import org.example.creational.abstractfactory.instance.Instance;
 import org.example.creational.abstractfactory.resource.Resource;
 
+import java.lang.reflect.Method;
+
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         ResourceFactory factory = new GoogleCloudResourceFactory();
 
         Resource resource = factory.generateResource(Instance.Capacity.large, 10);
