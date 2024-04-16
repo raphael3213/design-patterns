@@ -6,15 +6,13 @@ import org.example.creational.abstractfactory.resource.Resource;
 import java.lang.reflect.Method;
 
 public class Main {
-    public static void main(String[] args) throws ClassNotFoundException {
+    public static void main(String[] args)  {
         ResourceFactory factory = new GoogleCloudResourceFactory();
 
         Resource resource = factory.generateResource(Instance.Capacity.large, 10);
 
         resource.getInstance().start();
         resource.getInstance().stop();
-
-
         System.out.println(resource);
     }
 }
