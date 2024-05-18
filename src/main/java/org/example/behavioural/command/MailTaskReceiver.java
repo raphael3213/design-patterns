@@ -1,26 +1,25 @@
 package org.example.behavioural.command;
 
-import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-public class MailTaskRunner implements Runnable{
+public class MailTaskReceiver implements Runnable{
 
     public Thread getRunner() {
         return runner;
     }
 
-    private Thread runner;
+    private final Thread runner;
     private final List<Command> pendingCommands;
-    private static final MailTaskRunner INSTANCE = new MailTaskRunner();
+    private static final MailTaskReceiver INSTANCE = new MailTaskReceiver();
     private volatile boolean stop;
 
-    public static MailTaskRunner getInstance() {
+    public static MailTaskReceiver getInstance() {
         return INSTANCE;
     }
 
 
-    private MailTaskRunner(){
+    private MailTaskReceiver(){
         pendingCommands = new LinkedList<>();
         runner = new Thread(this);
         runner.start();
