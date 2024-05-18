@@ -1,10 +1,11 @@
-package org.example.behavioural.interpreter.permissions;
+package org.example.behavioural.interpreter;
 
-import org.example.behavioural.interpreter.Report;
+import org.example.behavioural.interpreter.permissions.*;
 
 import java.util.Stack;
 import java.util.StringTokenizer;
 
+//This class is in-charge of building the expression tree, based on the string to be parsed.
 public class PermissionBuilder {
 
     Stack<PermissionExpression> permissionStack = new Stack<>();

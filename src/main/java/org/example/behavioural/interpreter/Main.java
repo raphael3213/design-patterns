@@ -1,6 +1,5 @@
 package org.example.behavioural.interpreter;
 
-import org.example.behavioural.interpreter.permissions.PermissionBuilder;
 import org.example.behavioural.interpreter.permissions.PermissionExpression;
 
 public class Main {
